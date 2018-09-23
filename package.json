@@ -1,0 +1,29 @@
+{
+  "name": "page-static-generator",
+  "version": "1.0.0",
+  "description": "Static generator for Page framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guseyn/page-static-generator.git"
+  },
+  "keywords": [
+    "page",
+    "cutie",
+    "cuties",
+    "ui"
+  ],
+  "dependencies": {
+    "@cuties/cutie": "1.4.4",
+    "@cuties/fs": "1.1.2"
+  },
+  "author": "guseyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guseyn/page-static-generator/issues"
+  },
+  "homepage": "https://github.com/Guseyn/page-static-generator#readme"
+}
