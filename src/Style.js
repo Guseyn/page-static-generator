@@ -2,7 +2,7 @@
 
 const { AsyncObject } = require('@cuties/cutie');
 
-class Base extends AsyncObject {
+class Style extends AsyncObject {
 
   constructor(href, attrs) {
     super(href, attrs);
@@ -11,10 +11,10 @@ class Base extends AsyncObject {
   definedSyncCall() {
     return (href, attrs) => {
       return 
-`<base href=${href} ${attrs}>`;
+`<link rel="stylesheet" href="${href}" ${attrs}>`;
     }
   }
 
 }
 
-module.exports = Base;
+module.exports = Style;
