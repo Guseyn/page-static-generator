@@ -10,8 +10,7 @@ class Base extends AsyncObject {
 
   definedSyncCall() {
     return (href, attrs) => {
-      return 
-`<base href=${href} ${attrs}>`;
+      return `<base href=${href} ${attrs}>`;
     }
   }
 

@@ -10,8 +10,7 @@ class Meta extends AsyncObject {
 
   definedSyncCall() {
     return (attrs) => {
-      return 
-`<meta ${attrs}>`;
+      return `<meta ${attrs}>`;
     }
   }
 

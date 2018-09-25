@@ -10,8 +10,7 @@ class Link extends AsyncObject {
 
   definedSyncCall() {
     return (attrs) => {
-      return 
-`<link ${attrs}>`;
+      return `<link ${attrs}>`;
     }
   }
 

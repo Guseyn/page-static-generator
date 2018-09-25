@@ -10,10 +10,7 @@ class Head extends AsyncObject {
 
   definedSyncCall() {
     return (...elms) => {
-      return 
-`<head>
-  ${elms.join('\n\t')}
-</head>`;
+      return `<head>\n\t\t${elms.join('\n\t\t')}\n\t</head>`;
     }
   }
 

@@ -4,7 +4,7 @@
   "description": "Static generator for Page framework.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test-executor"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,10 @@
     "ui"
   ],
   "dependencies": {
+    "@cuties/assert": "^1.1.5",
     "@cuties/cutie": "1.4.4",
-    "@cuties/fs": "1.1.2"
+    "@cuties/fs": "1.1.2",
+    "@cuties/is": "^1.0.8"
   },
   "author": "guseyn",
   "license": "MIT",

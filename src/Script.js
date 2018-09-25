@@ -10,8 +10,7 @@ class Script extends AsyncObject {
 
   definedSyncCall() {
     return (src, attrs) => {
-      return 
-`<script src=${src} ${attrs}></script>`;
+      return `<script src="${src}" ${attrs}></script>`;
     }
   }
 

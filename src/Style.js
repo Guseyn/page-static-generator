@@ -10,8 +10,7 @@ class Style extends AsyncObject {
 
   definedSyncCall() {
     return (href, attrs) => {
-      return 
-`<link rel="stylesheet" href="${href}" ${attrs}>`;
+      return `<link rel="stylesheet" href="${href}" ${attrs}>`;
     }
   }
 
