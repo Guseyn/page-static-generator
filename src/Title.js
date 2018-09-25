@@ -10,8 +10,7 @@ class Title extends AsyncObject {
 
   definedSyncCall() {
     return (text) => {
-      return 
-`<title>${text}</title>`;
+      return `<title>${text}</title>`;
     }
   }
 

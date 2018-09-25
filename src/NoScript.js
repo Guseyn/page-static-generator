@@ -10,8 +10,7 @@ class NoScript extends AsyncObject {
 
   definedSyncCall() {
     return (text) => {
-      return 
-`<noscript>${text}</noscript>`;
+      return `<noscript>${text}</noscript>`;
     }
   }
 
