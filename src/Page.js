@@ -11,7 +11,7 @@ class Page extends AsyncObject {
 
   definedSyncCall() {
     return (attrs, head, body) => {
-      return `<html ${attrs}>\n\t${head}\n\t${body}\n</html>`;
+      return `<html ${attrs}>\n\t${head}\n\t${body}\n</html>\n`;
     }
   }
 
