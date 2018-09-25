@@ -7,6 +7,7 @@ module.exports = {
   Meta: require('./src/Meta'),
   NoScript: require('./src/NoScript'),
   Page: require('./src/Page'),
+  PrettyPage: require('./src/PrettyPage'),
   SavedPage: require('./src/SavedPage'),
   Script: require('./src/Script'),
   Style: require('./src/Style'),

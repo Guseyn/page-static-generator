@@ -2,7 +2,7 @@
 
 const { AsyncObject } = require('@cuties/cutie');
 
-// attributesForHtmlTag - string like 'lang="en"'
+// attrs - string like 'lang="en"'
 class Page extends AsyncObject {
 
   constructor(attrs, head, body) {
@@ -11,7 +11,7 @@ class Page extends AsyncObject {
 
   definedSyncCall() {
     return (attrs, head, body) => {
-      return `<html ${attrs}>\n\t${head}\n\t${body}\n</html>\n`;
+      return `<html ${attrs}>${head}${body}</html>\n`;
     }
   }
 

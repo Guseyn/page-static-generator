@@ -3,29 +3,55 @@ Static generator for Page framework (based on 'cuties' libs)
 
 ## Example
 
+Let's say we have templates: `outer.html`, `inner.html`,
+
+## outer.html
+
+```html
+<div class="outer">
+   {text}
+  <div class="place-for-inner-template">
+    {innerTemplate}
+  </div>
+</div>
+
+```
+
+
+## inner.html
+
+```html
+<div class="inner">
+   {text}
+</div>
+
+```
+
+Then we can create a page that contains these templates:
+
 ```js
 
 new SavedPage(
-  '/path/to/page.html', new Page(
-    attrsForHtmlTag,
+  'page.html', new Page(
+    'xmlns="http://www.w3.org/1999/xhtml" lang="en"',
     new Head(
       new Script(
-        'script1.js', 'attr1=val1, attr2=val2'
+        'script1.js', 'type="text/javascript"'
       ),
       new Script(
-        'script2.js', 'attr1=val1, attr2=val2'
+        'script2.js', 'type="text/javascript"'
       )
-      new Style('main.css', 'attr1=val1, attr2=val2'),
-      new Style('mobile.css', 'attr1=val1, attr2=val2')
+      new Style('main.css', 'type="text/css"'),
+      new Style('mobile.css', 'type="text/css"')
     ),
     new Body(
-      attrsForBodyTag,
-      new TemplateWithParams(new Template('/from/path1'), ...params),
+      'class="main"',
       new TemplateWithParams(
-        new Template('/from/path2'), 
+        new Template('outer.html'),
+        'text in outer template',
         new TemplateWithParams(
-          new Template('/from/path3'),
-          ...params
+          new Template('inner.html'),
+          'text in inner template'
         )
       )
     )
