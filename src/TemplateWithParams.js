@@ -10,8 +10,15 @@ class TemplateWithParams extends AsyncObject {
 
   definedSyncCall() {
     return (template, ...params) => {
-      return 
-`<link rel="stylesheet" href="${href}" ${attrs}>`;
+      let curParamNum = -1;
+      return template
+      .replace(/\{([^{}\\]*?)\}/gm, (match) => {
+        curParamNum += 1;
+        return params[curParamNum];
+      })
+      .replace(/(\\{|\\})/gm, (match, p1) => {
+        return p1[1];
+      });
     }
   }
 
