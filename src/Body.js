@@ -10,7 +10,7 @@ class Body extends AsyncObject {
 
   definedSyncCall() {
     return (attrs, ...elms) => {
-      return `<body ${attrs}>\n\t\t${elms.join('\n\t\t')}\n\t</body>`;
+      return `<body ${attrs}>${elms.join('')}</body>`;
     }
   }
 
