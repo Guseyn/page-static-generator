@@ -121,7 +121,7 @@ Full example is [here](https://github.com/Guseyn/page-static-generator/tree/mast
 | `Script` | Creates `script` tag(for `head` tag) | `src, attrs(string like 'attr="value"')` | `<script src="${src}" ${attrs}></script>` |
 | `Style` | Creates `link` tag with `rel="stylesheet` | `href, attrs(string like 'attr="value"')` | `<link rel="stylesheet" href="${href}" ${attrs}>` |
 | `Template` | Read html as string from the specified `file(as path)` | `path` | html string  |
-| `TemplateWithParams` | Replace all placeholders with the specified `...params` | `template, ...params` | html string |
+| `TemplateWithParams` | Replace all placeholders in a template with the specified `...params` | `template, ...params` | html string |
 | `Title` | Creates `title` tag | `text` | `<title>${text}</title>` |
 
 [npm-image]: https://img.shields.io/npm/v/@page-libs/static-generator.svg
