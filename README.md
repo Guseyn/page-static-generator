@@ -1,5 +1,7 @@
 # page-static-generator
-Static generator for Page framework (based on 'cuties' libs)
+Static generator for Page framework (based on 'cuties' libs and [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf)).
+
+[![NPM Version][npm-image]][npm-url]
 
 ## Example
 
@@ -121,3 +123,6 @@ Full example is [here](https://github.com/Guseyn/page-static-generator/tree/mast
 | `Template` | Read html as string from the specified `file(as path)` | html string |
 | `TemplateWithParams` | Replace all placeholders with the specified `...params` | `template, ...params` | html string |
 | `Title` | Creates `title` tag | `text` | `<title>${text}</title>` |
+
+[npm-image]: https://img.shields.io/npm/v/@page-libs/static-generator.svg
+[npm-url]: https://npmjs.org/package/@page-libs/static-generator
