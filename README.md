@@ -1,5 +1,5 @@
 # page-static-generator
-Static generator for Page framework (based on 'cuties' libs and [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf)).
+Static generator for [Page](https://github.com/Guseyn/page) framework (based on 'cuties' libs and [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf)).
 
 [![NPM Version][npm-image]][npm-url]
 
@@ -49,12 +49,8 @@ new SavedPage(
     new Page(
       'xmlns="http://www.w3.org/1999/xhtml" lang="en"',
       new Head(
-        new Script(
-          'script1.js', 'type="text/javascript"'
-        ),
-        new Script(
-          'script2.js', 'type="text/javascript"'
-        ),
+        new Script('script1.js', 'type="text/javascript"'),
+        new Script('script2.js', 'type="text/javascript"'),
         new Style('main.css', 'type="text/css"'),
         new Style('mobile.css', 'type="text/css"')
       ),
