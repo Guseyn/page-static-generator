@@ -120,7 +120,7 @@ Full example is [here](https://github.com/Guseyn/page-static-generator/tree/mast
 | `SavedPage` | Saves `page` to the specified `file(as path)` | `path, page` | `file(as path)` |
 | `Script` | Creates `script` tag(for `head` tag) | `src, attrs(string like 'attr="value"')` | `<script src="${src}" ${attrs}></script>` |
 | `Style` | Creates `link` tag with `rel="stylesheet` | `href, attrs(string like 'attr="value"')` | `<link rel="stylesheet" href="${href}" ${attrs}>` |
-| `Template` | Read html as string from the specified `file(as path)` | html string |
+| `Template` | Read html as string from the specified `file(as path)` | `path` | html string  |
 | `TemplateWithParams` | Replace all placeholders with the specified `...params` | `template, ...params` | html string |
 | `Title` | Creates `title` tag | `text` | `<title>${text}</title>` |
 
