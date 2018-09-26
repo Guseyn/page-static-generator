@@ -21,5 +21,5 @@ new EqualAssertion(
         new Body('fakeAttr="fakeValue"', 'elm1', 'elm2', 'elm3')
       )
     )
-  ), '<html lang="en"><head>elm1elm2elm3</head><body fakeAttr="fakeValue">elm1elm2elm3</body></html>\n'
+  ), '<!DOCTYPE html>\n<html lang="en"><head>elm1elm2elm3</head><body fakeAttr="fakeValue">elm1elm2elm3</body></html>\n'
 ).call();

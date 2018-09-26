@@ -11,7 +11,7 @@ class PrettyPage extends AsyncObject {
 
   definedSyncCall() {
     return (page) => {
-      return pretty(page);
+      return pretty(page) + '\n';
     }
   }
 
