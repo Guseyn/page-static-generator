@@ -103,6 +103,15 @@ The result is
 
 Full example is [here](https://github.com/Guseyn/page-static-generator/tree/master/example).
 
+## Usage
+
+```js
+const {
+  // Needed async objects here from the table below  
+} = require('@page-libs/static-generator');
+
+```
+
 | Async Object  | Description | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | `Base` | Creates `base` tag | `href, attrs(string like 'attr="value"')` | `<base href=${href} ${attrs}>` |
