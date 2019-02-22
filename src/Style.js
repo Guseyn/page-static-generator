@@ -1,19 +1,17 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 class Style extends AsyncObject {
-
-  constructor(href, attrs) {
-    super(href, attrs);
+  constructor (href, attrs) {
+    super(href, attrs)
   }
 
-  definedSyncCall() {
+  syncCall () {
     return (href, attrs) => {
-      return `<link rel="stylesheet" href="${href}" ${attrs}>`;
+      return `<link rel="stylesheet" href="${href}" ${attrs}>`
     }
   }
-
 }
 
-module.exports = Style;
+module.exports = Style

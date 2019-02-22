@@ -1,19 +1,17 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 class Base extends AsyncObject {
-
-  constructor(href, attrs) {
-    super(href, attrs);
+  constructor (href, attrs) {
+    super(href, attrs)
   }
 
-  definedSyncCall() {
+  syncCall () {
     return (href, attrs) => {
-      return `<base href=${href} ${attrs}>`;
+      return `<base href=${href} ${attrs}>`
     }
   }
-
 }
 
-module.exports = Base;
+module.exports = Base

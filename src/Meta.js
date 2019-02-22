@@ -1,19 +1,17 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 class Meta extends AsyncObject {
-
-  constructor(attrs) {
-    super(attrs);
+  constructor (attrs) {
+    super(attrs)
   }
 
-  definedSyncCall() {
+  syncCall () {
     return (attrs) => {
-      return `<meta ${attrs}>`;
+      return `<meta ${attrs}>`
     }
   }
-
 }
 
-module.exports = Meta;
+module.exports = Meta

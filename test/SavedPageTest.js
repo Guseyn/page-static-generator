@@ -1,17 +1,17 @@
 'use strict'
 
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   SavedPage,
   Template,
   Page,
   Body,
   Head
-} = require('./../index');
+} = require('./../index')
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new Template(
     new SavedPage(
       './test/page.html',
@@ -22,4 +22,4 @@ new EqualAssertion(
       )
     )
   ), '<!DOCTYPE html>\n<html lang="en"><head>elm1elm2elm3</head><body fakeAttr="fakeValue">elm1elm2elm3</body></html>\n'
-).call();
+).call()

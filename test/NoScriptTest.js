@@ -1,13 +1,13 @@
 'use strict'
 
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   NoScript
-} = require('./../index');
+} = require('./../index')
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new NoScript('bad browser'),
   '<noscript>bad browser</noscript>'
-).call();
+).call()

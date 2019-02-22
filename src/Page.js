@@ -1,20 +1,18 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 // attrs - string like 'lang="en"'
 class Page extends AsyncObject {
-
-  constructor(attrs, head, body) {
-    super(attrs, head, body);
+  constructor (attrs, head, body) {
+    super(attrs, head, body)
   }
 
-  definedSyncCall() {
+  syncCall () {
     return (attrs, head, body) => {
-      return `<!DOCTYPE html>\n<html ${attrs}>${head}${body}</html>\n`;
+      return `<!DOCTYPE html>\n<html ${attrs}>${head}${body}</html>\n`
     }
   }
-
 }
 
-module.exports = Page;
+module.exports = Page
