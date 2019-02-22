@@ -1,20 +1,18 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
-const pretty = require('pretty');
+const { AsyncObject } = require('@cuties/cutie')
+const pretty = require('pretty')
 
 class PrettyPage extends AsyncObject {
-
-  constructor(page) {
-    super(page);
+  constructor (page) {
+    super(page)
   }
 
-  definedSyncCall() {
+  syncCall () {
     return (page) => {
-      return pretty(page) + '\n';
+      return pretty(page) + '\n'
     }
   }
-
 }
 
-module.exports = PrettyPage;
+module.exports = PrettyPage

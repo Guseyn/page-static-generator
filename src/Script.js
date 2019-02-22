@@ -1,19 +1,17 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 class Script extends AsyncObject {
-
-  constructor(src, attrs) {
-    super(src, attrs);
+  constructor (src, attrs) {
+    super(src, attrs)
   }
 
-  definedSyncCall() {
+  syncCall () {
     return (src, attrs) => {
-      return `<script src="${src}" ${attrs}></script>`;
+      return `<script src="${src}" ${attrs}></script>`
     }
   }
-
 }
 
-module.exports = Script;
+module.exports = Script

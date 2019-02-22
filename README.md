@@ -1,7 +1,31 @@
 # page-static-generator
+
+[![NPM Version](https://img.shields.io/npm/v/@page-libs/static-generator.svg)](https://npmjs.org/package/@page-libs/static-generator)
+[![Build Status](https://travis-ci.org/Guseyn/page-static-generator.svg?branch=master)](https://travis-ci.org/Guseyn/page-static-generator)
+[![codecov](https://codecov.io/gh/Guseyn/page-static-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/Guseyn/page-static-generator)
+
 Static generator for [Page](https://github.com/Guseyn/page) framework (based on 'cuties' libs and [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf)).
 
-[![NPM Version][npm-image]][npm-url]
+## Install
+
+`npm install @page-libs/static-generator`
+
+## Run test
+
+`npm test`
+
+## Run build
+
+`npm run build`
+
+## Usage
+
+```js
+const {
+  // Needed async objects here from the table below  
+} = require('@page-libs/static-generator');
+
+```
 
 ## Example
 
@@ -103,15 +127,6 @@ The result is
 
 Full example is [here](https://github.com/Guseyn/page-static-generator/tree/master/example).
 
-## Usage
-
-```js
-const {
-  // Needed async objects here from the table below  
-} = require('@page-libs/static-generator');
-
-```
-
 | Async Object  | Description | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | `Base` | Creates `base` tag | `href, attrs(string like 'attr="value"')` | `<base href=${href} ${attrs}>` |
@@ -128,6 +143,3 @@ const {
 | `Template` | Read html as string from the specified `file(as path)` | `path` | html string  |
 | `TemplateWithParams` | Replace all placeholders in a template with the specified `...params` | `template, ...params` | html string |
 | `Title` | Creates `title` tag | `text` | `<title>${text}</title>` |
-
-[npm-image]: https://img.shields.io/npm/v/@page-libs/static-generator.svg
-[npm-url]: https://npmjs.org/package/@page-libs/static-generator

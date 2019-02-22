@@ -1,13 +1,13 @@
 'use strict'
 
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   Script
-} = require('./../index');
+} = require('./../index')
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new Script('src', 'attr="value"'),
   '<script src="src" attr="value"></script>'
-).call();
+).call()

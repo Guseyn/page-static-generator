@@ -1,13 +1,13 @@
 'use strict'
 
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   Title
-} = require('./../index');
+} = require('./../index')
 
-new EqualAssertion(
-  new Title("title"),
+new StrictEqualAssertion(
+  new Title('title'),
   '<title>title</title>'
-).call();
+).call()

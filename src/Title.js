@@ -1,19 +1,17 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 class Title extends AsyncObject {
-
-  constructor(text) {
-    super(text);
+  constructor (text) {
+    super(text)
   }
 
-  definedSyncCall() {
+  syncCall () {
     return (text) => {
-      return `<title>${text}</title>`;
+      return `<title>${text}</title>`
     }
   }
-
 }
 
-module.exports = Title;
+module.exports = Title

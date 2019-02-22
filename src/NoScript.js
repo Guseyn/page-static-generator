@@ -1,19 +1,17 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 class NoScript extends AsyncObject {
-
-  constructor(text) {
-    super(text);
+  constructor (text) {
+    super(text)
   }
 
-  definedSyncCall() {
+  syncCall () {
     return (text) => {
-      return `<noscript>${text}</noscript>`;
+      return `<noscript>${text}</noscript>`
     }
   }
-
 }
 
-module.exports = NoScript;
+module.exports = NoScript

@@ -1,19 +1,17 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 class Head extends AsyncObject {
-
-  constructor(...elms) {
-    super(...elms);
+  constructor (...elms) {
+    super(...elms)
   }
 
-  definedSyncCall() {
+  syncCall () {
     return (...elms) => {
-      return `<head>${elms.join('')}</head>`;
+      return `<head>${elms.join('')}</head>`
     }
   }
-
 }
 
-module.exports = Head;
+module.exports = Head
