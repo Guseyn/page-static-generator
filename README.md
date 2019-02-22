@@ -27,6 +27,23 @@ const {
 
 ```
 
+| Async Object  | Description | Parameters(default value/description) | Representation result |
+| ------------- | ----------------| ---------- | --------------------- |
+| `Base` | Creates `base` tag | `href, attrs(string like 'attr="value"')` | `<base href=${href} ${attrs}>` |
+| `Body` | Creates `body` tag | `attrs(string like 'attr="value"'), ...elms(elements inside of body tag)` | `<body ${attrs}>${elms.join('')}</body>` |
+| `Head` | Creates `head` tag | `...elms(elements inside of head tag)` | `<head>${elms.join('')}</head>` |
+| `Link` | Creates `link` tag | `attrs(string like 'attr="value"')` | `<link ${attrs}>` |
+| `Meta` | Creates `meta` tag | `attrs(string like 'attr="value"')` | `<meta ${attrs}>` |
+| `NoScript` | Creates `noscript` tag | `text` | `<noscript>${text}</noscript>` |
+| `Page` | Creates `html` tag | `attrs(string like 'attr="value"'), head, body` | `<!DOCTYPE html>\n<html ${attrs}>${head}${body}</html>\n` |
+| `PrettyPage` | Makes `page` pretty | `page` | Pretty html document(`page`) |
+| `SavedPage` | Saves `page` to the specified `file(as path)` | `path, page` | `file(as path)` |
+| `Script` | Creates `script` tag(for `head` tag) | `src, attrs(string like 'attr="value"')` | `<script src="${src}" ${attrs}></script>` |
+| `Style` | Creates `link` tag with `rel="stylesheet` | `href, attrs(string like 'attr="value"')` | `<link rel="stylesheet" href="${href}" ${attrs}>` |
+| `Template` | Read html as string from the specified `file(as path)` | `path` | html string  |
+| `TemplateWithParams` | Replace all placeholders in a template with the specified `...params` | `template, ...params` | html string |
+| `Title` | Creates `title` tag | `text` | `<title>${text}</title>` |
+
 ## Example
 
 Let's say we have templates: `outer.html`, `inner.html`:
@@ -126,20 +143,3 @@ The result is
 ```
 
 Full example is [here](https://github.com/Guseyn/page-static-generator/tree/master/example).
-
-| Async Object  | Description | Parameters(default value/description) | Representation result |
-| ------------- | ----------------| ---------- | --------------------- |
-| `Base` | Creates `base` tag | `href, attrs(string like 'attr="value"')` | `<base href=${href} ${attrs}>` |
-| `Body` | Creates `body` tag | `attrs(string like 'attr="value"'), ...elms(elements inside of body tag)` | `<body ${attrs}>${elms.join('')}</body>` |
-| `Head` | Creates `head` tag | `...elms(elements inside of head tag)` | `<head>${elms.join('')}</head>` |
-| `Link` | Creates `link` tag | `attrs(string like 'attr="value"')` | `<link ${attrs}>` |
-| `Meta` | Creates `meta` tag | `attrs(string like 'attr="value"')` | `<meta ${attrs}>` |
-| `NoScript` | Creates `noscript` tag | `text` | `<noscript>${text}</noscript>` |
-| `Page` | Creates `html` tag | `attrs(string like 'attr="value"'), head, body` | `<!DOCTYPE html>\n<html ${attrs}>${head}${body}</html>\n` |
-| `PrettyPage` | Makes `page` pretty | `page` | Pretty html document(`page`) |
-| `SavedPage` | Saves `page` to the specified `file(as path)` | `path, page` | `file(as path)` |
-| `Script` | Creates `script` tag(for `head` tag) | `src, attrs(string like 'attr="value"')` | `<script src="${src}" ${attrs}></script>` |
-| `Style` | Creates `link` tag with `rel="stylesheet` | `href, attrs(string like 'attr="value"')` | `<link rel="stylesheet" href="${href}" ${attrs}>` |
-| `Template` | Read html as string from the specified `file(as path)` | `path` | html string  |
-| `TemplateWithParams` | Replace all placeholders in a template with the specified `...params` | `template, ...params` | html string |
-| `Title` | Creates `title` tag | `text` | `<title>${text}</title>` |
