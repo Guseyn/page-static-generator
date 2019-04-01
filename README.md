@@ -51,9 +51,9 @@ Let's say we have templates: `outer.html`, `inner.html`:
 ```html
 <!-- outer.html -->
 <div class="outer">
-   {text}
+   {{ text }}
   <div class="place-for-inner-template">
-    {innerTemplate}
+    {{ innerTemplate }}
   </div>
 </div>
 
@@ -62,7 +62,7 @@ Let's say we have templates: `outer.html`, `inner.html`:
 ```html
 <!-- inner.html -->
 <div class="inner">
-   {text}
+   {{ text }}
 </div>
 
 ```

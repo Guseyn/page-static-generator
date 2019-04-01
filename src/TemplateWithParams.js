@@ -11,7 +11,7 @@ class TemplateWithParams extends AsyncObject {
     return (template, ...params) => {
       let curParamNum = -1
       return template
-        .replace(/\{([^{}\\]*?)\}/gm, (match) => {
+        .replace(/\{\{([^{}\\]*?)\}\}/gm, (match) => {
           curParamNum += 1
           return params[curParamNum]
         })
