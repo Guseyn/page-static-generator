@@ -9,5 +9,5 @@ const {
 
 new StrictEqualAssertion(
   new Template('./test/template.html'),
-  '<div class="template1">{text}<div class="place-for-template2">{innerTemplate}</div>\\{some text\\}</div>\n'
+  '<div class="template1">{{ text }}<div class="place-for-template2">{{ innerTemplate }}</div>\\{some text\\}</div>\n'
 ).call()
